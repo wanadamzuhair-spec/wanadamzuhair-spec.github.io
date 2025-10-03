@@ -5,156 +5,105 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Wan Adam Zuhair - Portfolio</title>
 <style>
-  /* Base & Reset */
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f9f9f9; color: #333; line-height: 1.6; }
-  a { color: #2980b9; text-decoration: none; }
-  .container { max-width: 900px; margin: auto; padding: 40px 20px; }
+  body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin:0; background:#f4f4f9; color:#333; line-height:1.6; }
+  .container { max-width:900px; margin:auto; padding:40px 20px; }
+  header { text-align:center; margin-bottom:50px; }
+  header img { width:150px; height:150px; border-radius:50%; object-fit:cover; display:block; margin:0 auto 15px; border:3px solid #2980b9; box-shadow:0 2px 8px rgba(0,0,0,0.2); }
+  header h1 { font-size:2.5rem; color:#2c3e50; margin-bottom:5px; }
+  header p { font-size:1.1rem; color:#555; margin-bottom:10px; }
+  .button { display:inline-block; background:#2980b9; color:#fff; padding:10px 20px; border-radius:5px; margin-top:10px; text-decoration:none; transition:0.3s; }
+  .button:hover { background:#1c5980; }
 
-  /* Header */
-  header { text-align: center; margin-bottom: 40px; }
-  header h1 { font-size: 2.5rem; color: #2c3e50; margin-bottom: 5px; }
-  header p { font-size: 1.1rem; color: #555; margin-bottom: 10px; }
-  .button { display: inline-block; background-color: #2980b9; color: #fff; padding: 10px 20px; border-radius: 5px; margin-top: 10px; transition: 0.3s; }
-  .button:hover { background-color: #1c5980; }
+  section { background:#fff; padding:25px 30px; margin-bottom:25px; border-radius:10px; box-shadow:0 2px 12px rgba(0,0,0,0.08); }
+  section h2 { color:#2c3e50; margin-bottom:15px; border-bottom:2px solid #ddd; padding-bottom:5px; }
 
-  /* Sections */
-  section { background-color: #fff; padding: 25px 30px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
-  section h2 { color: #2c3e50; margin-bottom: 15px; border-bottom: 2px solid #ddd; padding-bottom: 5px; }
+  .timeline { position: relative; margin-left:20px; }
+  .timeline::before { content: ''; position: absolute; left: 0; top:0; bottom:0; width:3px; background:#2980b9; }
+  .timeline-item { margin-bottom:20px; position:relative; padding-left:30px; }
+  .timeline-item::before { content:''; position:absolute; left:-9px; top:5px; width:16px; height:16px; background:#fff; border:3px solid #2980b9; border-radius:50%; }
 
-  /* Lists */
-  ul { list-style: none; padding-left: 0; }
-  ul li::before { content: "• "; color: #2980b9; font-weight: bold; }
-  ul li { margin-bottom: 8px; }
+  .skills { display:flex; flex-wrap:wrap; gap:15px; }
+  .skill { flex:1 1 40%; }
+  .skill-bar { height:12px; background:#ddd; border-radius:6px; overflow:hidden; margin-top:5px; }
+  .skill-fill { height:12px; background:#2980b9; border-radius:6px; width:0%; transition: width 1.5s ease; }
 
-  /* Tables */
-  table { width: 100%; border-collapse: collapse; margin-top: 10px; }
-  table td, table th { padding: 8px; border: 1px solid #ddd; }
-  table th { background-color: #f0f0f0; text-align: left; }
+  .hobby { display:flex; align-items:center; gap:15px; font-size:1.1rem; }
+  .hobby img { width:50px; height:50px; border-radius:8px; }
 
-  /* Footer */
-  footer { text-align: center; font-size: 0.9rem; color: #888; margin-top: 30px; }
+  footer { text-align:center; font-size:0.9rem; color:#888; margin-top:30px; }
 
-  /* Responsive */
-  @media (max-width: 600px) {
-    header h1 { font-size: 2rem; }
-    section { padding: 20px; }
-  }
+  @media(max-width:600px){ header h1{font-size:2rem;} section{padding:20px;} .skills{flex-direction:column;} }
+
 </style>
 </head>
 <body>
 <div class="container">
 
-  <!-- Header -->
+  <!-- Hero -->
   <header>
-      <img src="Adam Portrait.jpg" alt="Wan Adam Zuhair" style="
-      width:150px;
-      height:150px;
-      border-radius:50%;
-      object-fit:cover;
-      display:block;
-      margin:0 auto 15px auto;
-      border:3px solid #2980b9;
-      box-shadow:0 2px 8px rgba(0,0,0,0.2);
-  ">
+    <img src="Adam Portrait.jpg" alt="Wan Adam Zuhair">
     <h1>Wan Adam Zuhair</h1>
-    <p>Banking & Finance Professional | Analyst & Relationship Management</p>
-    <a href="01_WANADAMZUHAIR_WANMUHAMMADFAHMI_RESUME.pdf" class="button" target="_blank">My Resume</a>
+    <p>From banking fast-track to data analytics enthusiast</p>
+    <a href="01_WANADAMZUHAIR_WANMUHAMMADFAHMI_RESUME.pdf" class="button" target="_blank">Download CV</a>
   </header>
 
-  <!-- Professional Summary -->
+  <!-- Career Journey -->
   <section>
-    <h2>Professional Summary</h2>
-    <p>Banking professional with 3 years’ experience in front-line relationship management, KYC compliance, and client onboarding. Skilled in financial analysis, customer service, and cross-border client support, with proven ability to meet regulatory requirements and deliver high client satisfaction.</p>
+    <h2>Career Journey</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <h4>OCBC Bank - Senior Personal Financial Consultant</h4>
+        <p>Aug 2024 – Mar 2025</p>
+        <p>Oversaw branch operations, KYC/CDD compliance, and client relations.</p>
+      </div>
+      <div class="timeline-item">
+        <h4>UOB Bank - Relationship Manager</h4>
+        <p>May 2023 – May 2024</p>
+        <p>Managed 200+ high-net-worth clients and ensured regulatory compliance.</p>
+      </div>
+      <div class="timeline-item">
+        <h4>HSBC Amanah Bank - Primary Banker</h4>
+        <p>Oct 2021 – May 2023</p>
+        <p>Onboarded clients, handled loans, and ensured high service quality.</p>
+      </div>
+      <div class="timeline-item">
+        <h4>Transition to Data Analytics</h4>
+        <p>2025 – Present</p>
+        <p>Learning data analytics to pivot into a more technical, analytics-focused role.</p>
+      </div>
+    </div>
   </section>
 
-  <!-- Professional Experience -->
+  <!-- Skills -->
   <section>
-    <h2>Professional Experience</h2>
-    <h3>Senior Personal Financial Consultant | OCBC Bank, Singapore</h3>
-    <p>Aug 2024 – Mar 2025</p>
-    <ul>
-      <li>Oversaw daily branch operations to ensure smooth workflow and compliance, contributing to improved operational efficiency and revenue growth.</li>
-      <li>Conducted KYC/CDD reviews in compliance with MAS regulations, ensuring zero audit findings.</li>
-      <li>Delivered client-centric solutions, enhancing customer retention and satisfaction rates.</li>
-      <li>Liaised with compliance teams to escalate and resolve complex KYC/SOW cases.</li>
-    </ul>
-
-    <h3>Relationship Manager | UOB Bank, Singapore</h3>
-    <p>May 2023 – May 2024</p>
-    <ul>
-      <li>Managed a portfolio of 200+ high net-worth clients, generating fee income through investments, FX, and insurance products.</li>
-      <li>Ensured accurate documentation and adherence to compliance policies during account opening.</li>
-      <li>Built and maintained strong client relationships, resulting in repeat business and referrals.</li>
-      <li>Reviewed KYC documents and performed periodic client due diligence checks to meet regulatory requirements.</li>
-      <li>Assisted in assessing SOW documentation for wealth clients, supporting compliance with MAS AML/CFT guidelines.</li>
-    </ul>
-
-    <h3>Primary Banker | HSBC Amanah Bank, Malaysia</h3>
-    <p>Oct 2021 – May 2023</p>
-    <ul>
-      <li>Delivered tailored financial solutions for SME and retail clients, improving cross-sell ratios.</li>
-      <li>Supported clients with onboarding, loan processing, and compliance documentation.</li>
-      <li>Achieved consistent sales targets while maintaining high service quality.</li>
-      <li>Handled SOW reviews for clients, ensuring accuracy and completeness of financial background verification.</li>
-    </ul>
-
-    <h3>Account & Admin Intern | ARTEZ Group, Malaysia</h3>
-    <p>Jan 2019 – Mar 2019</p>
-    <ul>
-      <li>Assisted in accounts payable and receivable processes.</li>
-      <li>Provided admin support to various departments.</li>
-    </ul>
-
-    <h3>Marketing Intern | Cinema Online, Malaysia</h3>
-    <p>Aug 2016 – Nov 2016</p>
-    <ul>
-      <li>Assisted in developing marketing strategies and campaigns.</li>
-      <li>Supported creation of marketing materials for digital content.</li>
-    </ul>
+    <h2>Skills & Tools</h2>
+    <div class="skills">
+      <div class="skill">
+        <p>KYC & Banking</p>
+        <div class="skill-bar"><div class="skill-fill" style="width:95%"></div></div>
+      </div>
+      <div class="skill">
+        <p>Client Relationship</p>
+        <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
+      </div>
+      <div class="skill">
+        <p>Data Analysis</p>
+        <div class="skill-bar"><div class="skill-fill" style="width:60%"></div></div>
+      </div>
+      <div class="skill">
+        <p>Python / SQL</p>
+        <div class="skill-bar"><div class="skill-fill" style="width:50%"></div></div>
+      </div>
+    </div>
   </section>
 
-  <!-- Core Skills -->
+  <!-- Hobbies -->
   <section>
-    <h2>Core Skills</h2>
-    <ul>
-      <li>KYC & CDD Processes</li>
-      <li>Client Relationship Management</li>
-      <li>Regulatory Compliance (MAS)</li>
-      <li>Microsoft Office & CRM Systems</li>
-      <li>Financial Analysis & Data Analysis</li>
-      <li>Problem Solving & Communication Skills</li>
-    </ul>
-  </section>
-
-  <!-- Professional Development -->
-  <section>
-    <h2>Professional Development</h2>
-    <ul>
-      <li>IBM Data Science Professional Certificate (in progress, Coursera) – Python, SQL, data visualization, applied data analysis.</li>
-      <li>Google Data Analytics Professional Certificate (in progress, Coursera) – Data cleaning, analysis, and visualization using SQL, Excel, Tableau.</li>
-    </ul>
-  </section>
-
-  <!-- Education & Certifications -->
-  <section>
-    <h2>Education & Certifications</h2>
-    <ul>
-      <li>Bachelor of Business (Hons) in Finance & Economics – Taylor’s University, Malaysia</li>
-      <li>Institute of Banking & Finance (IBF), Singapore – Rules & Regulations for Dealing in Securities, M1B</li>
-      <li>Singapore College of Insurance (SCI), Singapore – Health Insurance, Life Insurance & Investment-Linked Policies I, Rules & Regulations for Financial Advisory Services, M5</li>
-    </ul>
-  </section>
-
-  <!-- Extra-Curricular -->
-  <section>
-    <h2>Extra-Curricular</h2>
-    <ul>
-      <li>Ernst & Young – Young Tax Professional of the Year Competition, 2019</li>
-      <li>Inter-varsity Stock Challenge, 2019</li>
-      <li>PAWS For Life Fundraiser, 2019</li>
-      <li>Fugee Program – Business education classes for refugees, 2016</li>
-    </ul>
+    <h2>Hobbies & Interests</h2>
+    <div class="hobby">
+      <img src="leagueicon.png" alt="League of Legends">
+      <p>Playing League of Legends – strategy, teamwork, and fun!</p>
+    </div>
   </section>
 
   <!-- Contact -->
@@ -163,7 +112,6 @@
     <p>Phone: +65 9174 1997</p>
     <p>Email: <a href="mailto:wanadamzuhair@gmail.com">wanadamzuhair@gmail.com</a></p>
     <p>LinkedIn: <a href="https://linkedin.com/in/wanadamzuhair" target="_blank">linkedin.com/in/wanadamzuhair</a></p>
-    <p>Location: 303 Woodlands Street 31 #03-179, Singapore 730303</p>
   </section>
 
 </div>
@@ -171,6 +119,17 @@
 <footer>
   &copy; 2025 Wan Adam Zuhair. All rights reserved.
 </footer>
+
+<script>
+  // Animate skill bars
+  window.addEventListener('load', () => {
+    document.querySelectorAll('.skill-fill').forEach(el => {
+      const width = el.style.width;
+      el.style.width = '0%';
+      setTimeout(() => el.style.width = width, 100);
+    });
+  });
+</script>
 
 </body>
 </html>
